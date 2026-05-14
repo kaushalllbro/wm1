@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Place an Order | WebMitra Website Studio</title>
+  <meta name="description" content="Send your website order to WebMitra. Pick a website type, site format and budget. Saved instantly to our database with WhatsApp confirmation." />
+  <link rel="canonical" href="https://webmitra.app/order.html" />
+  <link rel="icon" href="icons/logo.png" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/cons/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:title" content="Place an Order | WebMitra" />
+  <meta property="og:image" content="images/hero.jpg" />
+  <meta name="theme-color" content="#06070f" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark"><img src="icons/logo.png" alt="WebMitra" width="34" height="34"/></span><span class="brand-name-grad">WebMitra</span></a>
+      <button class="menu-toggle" data-menu-toggle aria-label="Open menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html" data-nav="index.html">Home</a>
+        <a href="services.html" data-nav="services.html">Services</a>
+        <a href="work.html" data-nav="work.html">Work</a>
+        <a href="pricing.html" data-nav="pricing.html">Pricing</a>
+        <a href="about.html" data-nav="about.html">About</a>
+        <a href="contact.html" data-nav="contact.html">Contact</a>
+        <a class="nav-cta btn btn-primary" href="order.html" data-nav="order.html">Order Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero center" style="padding-bottom:24px">
+      <div class="container">
+        <span class="eyebrow fade-in">Order</span>
+        <h1 class="fade-in delay-1">Send your website request.</h1>
+        <p class="lead fade-in delay-2">Continue with Google or email, fill the form, and your order is saved to our database before WhatsApp opens for instant confirmation.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px">
+      <div class="container" style="max-width:820px">
+        <div class="auth-panel">
+          <span class="eyebrow">Step 1</span>
+          <h3 style="margin:14px 0 4px">Login before ordering</h3>
+          <p class="sec-desc">Google sign in auto fills your name and email. Email continue works immediately.</p>
+          <div class="auth-grid">
+            <button class="btn btn-light" type="button" id="google-login">Continue with Google</button>
+            <button class="btn btn-ghost" type="button" id="email-start">Continue with Email</button>
+          </div>
+          <div class="divider"></div>
+          <div class="email-row" id="email-row" style="display:none">
+            <input id="email-auth" type="email" placeholder="you@example.com" autocomplete="email" />
+            <button class="btn btn-primary" type="button" id="email-continue">Continue</button>
+          </div>
+          <div id="auth-status" class="status info" style="margin-top:14px">Choose a sign in method to continue.</div>
+        </div>
+
+        <div class="progress-dots">
+          <div class="pdot active"><span class="num">1</span><span>Login</span></div>
+          <div class="pdot"><span class="num">2</span><span>Project</span></div>
+          <div class="pdot"><span class="num">3</span><span>Save</span></div>
+        </div>
+
+        <form id="order-form" class="form" novalidate>
+          <div class="form-section">
+            <h3>About you</h3>
+            <p class="sec-desc">We use this to confirm your order.</p>
+            <div class="field"><label for="name">Your name <span class="req">*</span></label><input id="name" name="name" type="text" placeholder="e.g. Rahul Sharma" required autocomplete="name" /><span class="err">Please enter your name.</span></div>
+            <div class="field"><label for="email">Email address <span class="req">*</span></label><input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" /><span class="err">Please enter a valid email.</span></div>
+            <div class="field"><label for="phone">Phone number <span class="req">*</span></label><input id="phone" name="phone" type="tel" placeholder="e.g. +91 98765 43210" required autocomplete="tel" /><span class="err">Please enter a valid phone number.</span></div>
+          </div>
+
+          <div class="form-section">
+            <h3>Project details</h3>
+            <p class="sec-desc">Tell us what you want and we will price it right.</p>
+            <div class="field"><label for="type">Website type <span class="req">*</span></label>
+              <select id="type" name="type" required>
+                <option value="">Select a type...</option>
+                <option>Portfolio</option>
+                <option>Resume / Personal Brand</option>
+                <option>Birthday Invitation</option>
+                <option>Wedding Invitation</option>
+                <option>Business Landing Page</option>
+                <option>Cafe / Restaurant</option>
+                <option>Salon / Clinic</option>
+                <option>Shop Catalogue</option>
+                <option>Coaching / Course</option>
+                <option>Booking Page</option>
+                <option>Real Estate</option>
+                <option>NGO / Community</option>
+                <option>Other Custom Site</option>
+              </select>
+              <span class="err">Please pick a website type.</span>
+            </div>
+
+            <div class="field" id="siteFormatField">
+              <label>Site format <span class="req">*</span></label>
+              <div class="radio-grid">
+                <label class="radio-card"><input type="radio" name="siteFormat" value="Laptop / Desktop Site" /><strong>Laptop / Desktop Site</strong><span>Best when most visitors will view on a computer.</span></label>
+                <label class="radio-card"><input type="radio" name="siteFormat" value="Mobile First Site" checked /><strong>Mobile First Site</strong><span>Most popular. Designed for phones.</span></label>
+                <label class="radio-card"><input type="radio" name="siteFormat" value="Both (extra cost)" /><strong>Both (may cost a little extra)</strong><span>Two distinct layouts tuned for desktop and mobile.</span></label>
+              </div>
+              <span class="err">Please pick a site format.</span>
+            </div>
+
+            <div class="field"><label for="budget">Budget range <span class="req">*</span></label>
+              <select id="budget" name="budget" required>
+                <option value="">Select a budget...</option>
+                <option>Under Rs 1,500</option>
+                <option>Rs 1,500 to Rs 3,000</option>
+                <option>Rs 3,000 to Rs 6,000</option>
+                <option>Rs 6,000 to Rs 10,000</option>
+                <option>Rs 10,000+</option>
+              </select>
+              <span class="err">Please pick a budget range.</span>
+            </div>
+
+            <div class="field"><label for="deadline">Preferred deadline</label>
+              <select id="deadline" name="deadline">
+                <option>As soon as possible</option>
+                <option>Within 48 hours</option>
+                <option>This week</option>
+                <option>This month</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+
+            <div class="field"><label for="description">Project description <span class="req">*</span></label><textarea id="description" name="description" placeholder="Pages needed, theme, references, content, deadline, features..." required></textarea><span class="err">Please describe your project briefly.</span></div>
+          </div>
+
+          <div class="form-section">
+            <h3>Save order</h3>
+            <p class="sec-desc">Your order is written to our secure database first, then WhatsApp opens for instant confirmation.</p>
+            <div id="order-status" class="status info">Ready when you are.</div>
+            <button class="btn btn-primary btn-block" type="submit" style="margin-top:14px">Save &amp; Send Order</button>
+            <p class="muted" style="font-size:0.82rem;text-align:center;margin-top:12px">By placing an order you agree to our friendly back and forth on WhatsApp.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><a class="brand" href="index.html"><span class="brand-mark"><img src="icons/logo.png" alt="WebMitra" width="34" height="34"/></span><span class="brand-name-grad">WebMitra</span></a><p class="muted" style="max-width:320px;margin-top:14px;font-size:14px">Premium websites for India.</p></div>
+        <div><h4>Explore</h4><a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="pricing.html">Pricing</a><a href="about.html">About</a></div>
+        <div><h4>Get Started</h4><a href="order.html">Place an Order</a><a href="contact.html">Contact Us</a><a href="faq.html">FAQs</a><a data-wa>WhatsApp</a></div>
+        <div><h4>Demos</h4><a href="demo-portfolio.html">Portfolio</a><a href="demo-shop.html">Shop</a><a href="demo-cafe.html">Cafe</a><a href="demo-invite.html">Birthday Invite</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="yr"></span> WebMitra (WebM). Built with care in India.</span><span>Email: hello@webmitra.app</span></div>
+    </div>
+  </footer>
+  <a class="float-wa" data-wa aria-label="Chat on WhatsApp">💬 WhatsApp</a>
+  <script src="app.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

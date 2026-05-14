@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Riya Turns 21 — Birthday Invite | WebMitra Event Demo</title>
+  <meta name="description" content="A complete birthday invitation website demo by WebMitra. Live countdown, dress code, venue and one tap RSVP." />
+  <link rel="canonical" href="https://webmitra.app/demo-invite.html" />
+  <link rel="icon" href="icons/logo.png" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#06070f" />
+</head>
+<body class="demo-body theme-invite">
+  <nav class="demo-nav">
+    <div class="demo-wrap">
+      <strong>Riya Turns 21</strong>
+      <div class="demo-links">
+        <a href="#details">Details</a><a href="#rsvp">RSVP</a>
+        <a class="btn btn-ghost btn-sm" href="work.html">Back to WebMitra</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-img-bg fade-in" style="--bg-img:url('images/demo-invite.jpg')">
+          <div>
+            <span class="eyebrow gold">You are invited</span>
+            <h1>Riya turns 21. And we are throwing a night to remember.</h1>
+            <p class="lead">Saturday, 25 December 2026 · 7 PM onwards · The Garden Pavilion, Mumbai. Indigo &amp; gold dress code, dancing till late.</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#rsvp">RSVP now</a>
+              <a class="btn btn-ghost" href="https://maps.google.com" target="_blank" rel="noopener">Open venue map</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="countdown reveal" data-countdown="2026-12-25T19:00:00">
+          <div class="cd"><div class="n" data-cd-d>00</div><div class="l">Days</div></div>
+          <div class="cd"><div class="n" data-cd-h>00</div><div class="l">Hours</div></div>
+          <div class="cd"><div class="n" data-cd-m>00</div><div class="l">Minutes</div></div>
+          <div class="cd"><div class="n" data-cd-s>00</div><div class="l">Seconds</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="details">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">The night</span><h2>Everything you need to know</h2></div>
+        <div class="grid grid-3">
+          <article class="card reveal"><h3>📅 When</h3><p>Saturday, 25 December 2026<br>7:00 PM onwards · Cake cutting at 9 PM</p></article>
+          <article class="card reveal"><h3>📍 Where</h3><p>The Garden Pavilion<br>Bandra West, Mumbai 400050</p></article>
+          <article class="card reveal"><h3>👗 Dress code</h3><p>Indigo &amp; gold. Festive cocktail. Heels welcome, sneakers more so.</p></article>
+          <article class="card reveal"><h3>🎁 Gifts</h3><p>Your presence is the gift. If you insist, blessings &amp; books only.</p></article>
+          <article class="card reveal"><h3>🚗 Parking</h3><p>Valet available at the entrance. Uber drop point is well lit.</p></article>
+          <article class="card reveal"><h3># Hashtag</h3><p>Tag your photos with <strong style="color:var(--gold)">#RiyaAt21</strong></p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rsvp" style="padding-top:0">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Will you be there?</h2>
+          <p>One tap to confirm on WhatsApp. Riya replies personally.</p>
+          <a class="btn btn-primary" data-wa>RSVP on WhatsApp</a>
+          <a class="btn btn-ghost" href="order.html?type=Birthday Invitation">Build my invite</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-bottom"><span>Demo by <a href="index.html" style="color:var(--accent)">WebMitra</a></span><span>© <span id="yr"></span></span></div></div></footer>
+  <a class="float-wa" data-wa aria-label="Chat on WhatsApp">💬 WhatsApp</a>
+  <script src="app.js"></script>
+</body>
+</html>
